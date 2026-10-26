@@ -3,7 +3,8 @@ Contributors: speccode
 Tags: acf, advanced custom fields, price
 Requires at least: 3.5
 Tested up to: 4.8
-Stable tag: 1.2.1
+Requires PHP: 7.0
+Stable tag: 1.3.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -46,6 +47,14 @@ This ACF field type is compatible with:
 4. Please refer to the description for more info regarding the field type settings
 
 == Changelog ==
+
+= [1.3.0] 2026-10-26 =
+* Harden `update_value()`: values are sanitised server-side, so writes that bypass the client-side mask (REST API, WP-CLI, imports) are cleaned or rejected instead of stored raw
+* Fix fatal `TypeError` in `format_value()` on PHP 8+ when stored meta is not strictly numeric
+* Fix `|0//|` format storing thousands separators verbatim
+* Fix undefined array key notices for fields without a `format` setting
+* Escape the field `id` and format data attributes in the rendered input
+* Add `ABSPATH` guards to included field files
 
 = [1.2.1] 2017-07-15 =
 * added translations

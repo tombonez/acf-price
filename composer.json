@@ -2,9 +2,9 @@
     "name": "speccode/acf-price",
     "type": "wordpress-plugin",
     "description": "Wordpress ACF Price field with number formatting.",
-    "homepage": "https://github.com/speccode/advanced-custom-fields-price",
+    "homepage": "https://github.com/tombonez/acf-price",
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=7.0"
     },
     "license": "MIT",
     "authors": [
