@@ -4,6 +4,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 abstract class acf_price_common extends acf_field
 {
+    /**
+     * Declared explicitly (ACF's field base class does not declare these):
+     * assigning undeclared properties triggers "creation of dynamic
+     * property" deprecations on PHP 8.2+.
+     */
+    public $formats;
+    public $settings;
+
     public function __construct( $settings )
     {
         $this->name = 'price';

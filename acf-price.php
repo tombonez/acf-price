@@ -16,6 +16,14 @@ if( ! defined( 'ABSPATH' ) ) exit;
 
 class acf_plugin_price
 {
+    /**
+     * Declared explicitly: assigning an undeclared property triggers a
+     * "creation of dynamic property" deprecation on PHP 8.2+, which is
+     * printed during activation when WP_DEBUG_DISPLAY is on and surfaces
+     * as the "unexpected output during activation" warning.
+     */
+    public $settings;
+
     public function __construct()
     {
         $this->settings = array(
