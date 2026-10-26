@@ -4,7 +4,7 @@ Tags: acf, advanced custom fields, price
 Requires at least: 3.5
 Tested up to: 4.8
 Requires PHP: 7.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -47,6 +47,10 @@ This ACF field type is compatible with:
 4. Please refer to the description for more info regarding the field type settings
 
 == Changelog ==
+
+= [1.3.1] 2026-10-26 =
+* Fix "Creation of dynamic property" deprecation notices on PHP 8.2+ by declaring the `settings` and `formats` class properties
+* Resolves the "plugin generated N characters of unexpected output during activation" warning shown when `WP_DEBUG_DISPLAY` is enabled
 
 = [1.3.0] 2026-10-26 =
 * Harden `update_value()`: values are sanitised server-side, so writes that bypass the client-side mask (REST API, WP-CLI, imports) are cleaned or rejected instead of stored raw
