@@ -1,5 +1,5 @@
 {
-    "name": "speccode/acf-price",
+    "name": "tombonez/acf-price",
     "type": "wordpress-plugin",
     "description": "Wordpress ACF Price field with number formatting.",
     "homepage": "https://github.com/tombonez/acf-price",
